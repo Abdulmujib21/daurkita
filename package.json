@@ -1,6 +1,6 @@
 {
   "name": "daurkita",
-  "version": "1.9.0",
+  "version": "1.9.1",
   "private": true,
   "description": "DaurKita — marketplace daur ulang (server + aplikasi, tanpa dependensi)",
   "main": "index.js",

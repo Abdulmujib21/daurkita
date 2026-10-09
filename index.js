@@ -1,5 +1,5 @@
 /* ============================================================
-   DaurKita — Server Backend (v1.9.0)
+   DaurKita — Server Backend (v1.9.1)
    ------------------------------------------------------------
    Server ini TANPA dependensi (tidak perlu "npm install").
    Cukup jalankan:  node index.js
@@ -388,7 +388,7 @@ const server = http.createServer(async (req, res) => {
     }
 
     /* ---------- static (sajikan aplikasi HTML) ---------- */
-    if (p === "/" || p === "/index.html") { res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" }); return res.end(renderHTML()); }
+    if (p === "/" || p === "/index.html") { res.writeHead(200, { "Content-Type": "text/html; charset=utf-8", "Cache-Control": "no-store" }); return res.end(renderHTML()); }
     let file = p;
     const full = path.join(__dirname, decodeURIComponent(file));
     if (full.startsWith(__dirname) && fs.existsSync(full) && fs.statSync(full).isFile()) {
